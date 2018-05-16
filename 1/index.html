@@ -9,9 +9,32 @@ Tip: Investigar el evento window.onload
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Cargar Dom, cargar Img</title>
   </head>
+
+  <style media="screen">
+    body{
+      text-align: center;
+    }
+    img{
+      width: 80%;
+    }
+  </style>
   <body>
 
+    <img src="http://s1.1zoom.me/big0/600/Chile_Mountains_Rivers_Sky_Scenery_Torres_del_522638_1280x848.jpg" alt="" />
+    <img src="https://images4.alphacoders.com/657/657338.jpg" alt="" />
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+          alert("DOM tiki taca");
+        });
+
+        $(window).on("load", function(){
+          alert("Imagenes listas también");
+          console.log("yei, its done")
+        });
+    </script>
   </body>
 </html>
